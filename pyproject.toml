@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "fastapi-dramatiq"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <stb.4421@gmail.com>"]
+readme = "README.md"
+packages = [{include = "fastapi_dramatiq"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+dramatiq = {extras = ["watch"], version = "^1.14.2"}
+requests = "^2.31.0"
+pydantic = "^2.1.1"
+pydantic-settings = "^2.0.2"
+fastapi = "^0.104.1"
+rabbitmq = "^0.2.0"
+pika = "^1.3.2"
+uvicorn = {extras = ["standard"], version = "^0.23.2"}
+loguru = "^0.7.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.8"
+mypy = "^1.7.1"
+types-requests = "^2.31.0.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

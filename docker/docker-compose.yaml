@@ -1,0 +1,37 @@
+version: "3.8"
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    ports:
+      - "${DOCKER_RABBITMQ_MAPPED_PORT}:5672"
+      - "${DOCKER_RABBITMQ_MAPPED_MANAGEMENT_PORT}:15672"  # Management port
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USERNAME}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+    networks:
+      - fastapi_dramatiq
+  tasks_api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: api
+    env_file:
+      - ../.env
+    ports:
+      - "${API_PORT}:3010"
+    networks:
+      - fastapi_dramatiq
+  workers:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: workers
+    networks:
+      - fastapi_dramatiq
+    depends_on:
+      - rabbitmq
+    command: /app/entrypoint_dramatiq.sh
+networks:
+  fastapi_dramatiq:
+    driver: bridge
