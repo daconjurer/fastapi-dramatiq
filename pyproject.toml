@@ -10,7 +10,7 @@ packages = [{include = "fastapi_dramatiq"}]
 python = "^3.10"
 dramatiq = {extras = ["watch"], version = "^1.14.2"}
 requests = "^2.31.0"
-pydantic = "^2.1.1"
+pydantic = "^2.4.0"
 pydantic-settings = "^2.0.2"
 fastapi = "^0.104.1"
 rabbitmq = "^0.2.0"
