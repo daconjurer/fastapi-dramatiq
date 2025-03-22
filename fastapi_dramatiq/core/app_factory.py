@@ -5,7 +5,6 @@ from fastapi_dramatiq import __version__
 from fastapi_dramatiq.api.v1 import api_router
 from fastapi_dramatiq.settings.application import get_app_settings
 
-
 settings = get_app_settings()
 
 

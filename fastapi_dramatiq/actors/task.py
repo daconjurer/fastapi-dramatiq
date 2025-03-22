@@ -1,8 +1,8 @@
 import time
-import dramatiq
 
-from loguru import logger
+import dramatiq
 import requests
+from loguru import logger
 
 
 @dramatiq.actor

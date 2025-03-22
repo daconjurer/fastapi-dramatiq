@@ -40,6 +40,6 @@ rabbitmq_broker = RabbitmqBroker(url=get_broker_url(settings.containerized))
 dramatiq.set_broker(rabbitmq_broker)
 
 
-from fastapi_dramatiq.actors.task import run_task, count_words  # noqa: E402
+from fastapi_dramatiq.actors.task import count_words, run_task  # noqa: E402
 
 __all__ = ("run_task", "count_words")
