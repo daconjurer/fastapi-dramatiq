@@ -1,4 +1,4 @@
-from pydantic import Field, IPvAnyAddress
+from pydantic import Field
 
 from fastapi_dramatiq.settings.base import CommonSettings
 

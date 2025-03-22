@@ -3,7 +3,6 @@ from fastapi import APIRouter
 from fastapi_dramatiq import schemas
 from fastapi_dramatiq.actors.task import run_task
 
-
 router = APIRouter()
 
 

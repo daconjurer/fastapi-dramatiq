@@ -1,8 +1,6 @@
 from typing import Union
-from uuid import UUID
 
-from pydantic import BaseModel, Field, ConfigDict
-
+from pydantic import BaseModel, ConfigDict, Field
 
 BASE_SCHEMA_EXTRA = {"example": {"seconds": 10}}
 

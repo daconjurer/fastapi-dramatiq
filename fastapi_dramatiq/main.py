@@ -1,5 +1,4 @@
 from fastapi_dramatiq.core.app_factory import create_app
-
 from fastapi_dramatiq.settings.application import get_app_settings
 
 settings = get_app_settings()

@@ -1,10 +1,11 @@
-from pydantic import Field
 from functools import lru_cache
 
-from fastapi_dramatiq.settings.base import CommonSettings
-from fastapi_dramatiq.settings.rabbitmq import RabbitmqSettings
+from pydantic import Field
+
 from fastapi_dramatiq.settings.api import APISettings
+from fastapi_dramatiq.settings.base import CommonSettings
 from fastapi_dramatiq.settings.docker import DockerSettings
+from fastapi_dramatiq.settings.rabbitmq import RabbitmqSettings
 
 
 class AppSettings(CommonSettings):
