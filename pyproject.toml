@@ -21,8 +21,10 @@ loguru = "^0.7.2"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.1.8"
-mypy = "^1.7.1"
+pyright = "^1.1.397"
 types-requests = "^2.31.0.10"
+coverage = "^7.7.1"
+pytest = "^8.3.5"
 
 [build-system]
 requires = ["poetry-core"]
