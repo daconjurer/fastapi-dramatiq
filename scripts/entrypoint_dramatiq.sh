@@ -2,7 +2,7 @@
 
 delay=1
 while true; do
-  poetry run dramatiq fastapi_dramatiq.actors
+  dramatiq fastapi_dramatiq.actors
   if [ $? -eq 3 ]; then
     echo "Connection error encountered on startup. Retrying in $delay second(s)..."
     sleep $delay
