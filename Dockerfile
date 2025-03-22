@@ -31,5 +31,4 @@ CMD ["python3", "-m", "fastapi_dramatiq.main"]
 
 FROM builder as workers
 
-ADD .env /app/.env
 ADD scripts/entrypoint_dramatiq.sh /app/entrypoint_dramatiq.sh
