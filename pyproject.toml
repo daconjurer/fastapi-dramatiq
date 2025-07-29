@@ -9,7 +9,7 @@ packages = [{include = "fastapi_dramatiq"}]
 [tool.poetry.dependencies]
 python = ">=3.12, <3.14"
 dramatiq = {extras = ["watch"], version = "^1.17.0"}
-requests = "^2.32.2"
+requests = "^2.32.4"
 pydantic = "^2.10.5"
 pydantic-settings = "^2.8.0"
 fastapi = "^0.115.0"
